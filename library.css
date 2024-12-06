@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+:root {
+    --accent-color: rgb(255, 73, 149);
+    font-size: 18px;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: beige;
+    height: 100vh;
+    display: grid;
+    grid-template: clamp(150px, 10vh, 300px) 1fr clamp(90px,5vh, 180px)/100%;
+}
+
+header {
+    padding: 5vh 5vw 1vh;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem ;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.bookshelf {
+    display: flex;
+    gap: 40px;
+    background-color: lightgray;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: clamp(200px, 25vmin, 400px);
+    height: clamp(250px, 25vmin, 500px);
+    background-color: beige;
+    padding: 30px 15px;
+    border-radius: 1%;
+    box-shadow: 3px 3px 5px 0 var(--accent-color);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 1.250rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.pages {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read, .delButton, .notRead {
+    padding: 5px 15px;
+    font-family: monospace;
+    justify-content: space-between;
+}
+
+.delButton {
+    border: 0;
+    background-color: transparent;
+}
+
+.notRead {
+    background-color: transparent;
+    color: var(--accent-color);
+    box-shadow: 3px 3px 5px 0 var(--accent-color);
+    border: 1px solid lightgray;
+}
+
+.read {
+    background-color: var(--accent-color);
+    color: beige;
+    border: 0;
+    border-radius: 5%;
+    box-shadow: 3px 3px 5px 0 gray;
+}
+
+.read:active, .notRead:active {
+    box-shadow:none;
+}
+
+footer {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px solid var(--accent-color);
+}
+
+.addButton {
+    width: clamp(30px, 7vmin, 100px);
+    height: clamp(30px,  7vmin, 100px);
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--accent-color);
+    font-weight: 500;
+    font-size: 3rem;
+    color: beige;
+}
